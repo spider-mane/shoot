@@ -1,0 +1,66 @@
+//
+@mixin border_radius_card_end($end, $radius) {
+  @if $end== 'top' {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+
+  } @else if $end == 'bottom' {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
+
+///
+@mixin soul_glo($glow) {
+  box-shadow: 0 0 9px 3px rgba($glow, .9) inset;
+  background-color: rgba($glow, .4);
+}
+
+///  use in ::before
+@mixin overlay($background: rgba(white, 0)) {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $background;
+  }
+}
+
+//
+@mixin inner_shadow($depth, $color) {
+  box-shadow: 0 0 $depth $depth rgba($color, .7) inset;
+}
+
+@mixin navSocialLinks($padding) {
+  padding: 0;
+  font-size: 1.5rem;
+  list-style: none;
+
+  a {
+    color: inherit;
+  }
+
+  li {
+    &:not(:first-of-type):not(:last-of-type) {
+      a {
+        padding: 0 $padding;
+      }
+    }
+
+    &:first-of-type {
+      a {
+        padding-right: $padding;
+      }
+    }
+
+    &:last-of-type {
+      a {
+        padding-left: $padding;
+      }
+    }
+  }
+}

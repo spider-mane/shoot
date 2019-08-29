@@ -1,0 +1,29 @@
+{
+  "name": "webtheorystudio/shoot",
+  "description": "Starter theme for wordpress using Timber and more",
+  "type": "project",
+
+  "require": {
+    "giggsey/libphonenumber-for-php": "^8.10",
+    "illuminate/contracts": "^5.8",
+    "illuminate/config": "^5.8",
+    "illuminate/container": "^5.8",
+    "timber/timber": "^1.10"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "WebTheory\\": ["lib/", "app/"]
+    }
+  },
+
+  "require-dev": {
+    "filp/whoops": "^2.4",
+    "joshtronic/php-loremipsum": "^1.0",
+    "symfony/var-dumper": "^4.3"
+  },
+
+  "config": {
+    "sort-packages": true
+  }
+}

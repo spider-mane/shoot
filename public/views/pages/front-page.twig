@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% set includes = "includes/front-page/" %}
+{% set sections = includes ~ "section--" %}
+
+{% block header %}
+  {% include('components/hero.twig') %}
+{% endblock %}
+
+{% block content %}
+  <h1>Front Page</h1>
+{% endblock %}

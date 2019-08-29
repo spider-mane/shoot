@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+
+  <head>
+    {% block head %}
+      <meta charset="{{ site.charset }}">
+      <meta name="description" content="{{ site.description }}">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="ie=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+
+      <title>{{ site.title }}</title>
+
+      <link rel="icon" href="{{ icon }}" type="image/png">
+    {% endblock %}
+    {{ wp_head }}
+  </head>
+
+  <body id="body" class="{{ body.class }}" {{ body.attributes }}>
+
+    {# navbar #}
+    <nav id="navigation" class="{{ navbar.class }}" {{ navbar.attributes }}>
+      {% block navbar %}
+        {% include('components/navbar.twig') %}
+      {% endblock %}
+    </nav>
+
+    {# header/hero/banner/etc #}
+    <header id="header" class="{{ header.class }}" {{ header.attributes }}>
+      {% block header %}
+        {% include('components/header.twig') %}
+      {% endblock %}
+    </header>
+
+    {# container for primary portion of the page #}
+    <main id="main" class="{{ main.class }}" {{ main.attributes }}>
+      {% block content %}{% endblock %}
+    </main>
+
+    {# footer #}
+    <footer id="footer" class="{{ footer.class }}" {{ footer.attributes }}>
+      {% block footer %}
+        {% include('components/footer.twig') %}
+      {% endblock %}
+    </footer>
+
+    {{ wp_footer }}
+
+  </body>
+
+</html>

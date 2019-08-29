@@ -1,0 +1,30 @@
+# Editor/ IDE
+.idea/
+.vscode/
+.project/
+nbproject/
+*.code-workspace
+
+# NPM
+node_modules/
+.npm
+
+# Composer
+/vendor/
+composer.phar
+
+# OS
+.DS_Store
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Logs
+*.log
+npm-debug-log
+
+# Misc
+.eslintcache

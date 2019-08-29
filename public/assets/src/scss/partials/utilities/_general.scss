@@ -1,0 +1,163 @@
+// positioning
+.absolute-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+// font sizes
+@each $ds, $dsValues in $customDisplaySizes {
+  .display-#{$ds} {
+    @include font-size(map-get($dsValues, size));
+    font-weight: map-get($dsValues, weight);
+    line-height: $display-line-height;
+  }
+}
+
+// ########## TYPOGRAPHY ##########
+.lh {
+  &-1 {
+    line-height: 1;
+  }
+}
+
+// ########## COLORS ##########
+@mixin bgImgTransparent($src, $opacity) {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: $opacity;
+    z-index: -1;
+    background: url($src);
+  }
+}
+
+.focus-keep:focus {
+  background-color: default;
+}
+
+// opacity
+@each $level, $opacityValue in $opacity-levels {
+  // transparency
+  .opacity-#{$level} {
+    opacity: $opacityValue;
+  }
+
+  // background
+  .bg-transparent-dark-#{$level} {
+    background-color: rgba(black, $opacityValue);
+  }
+
+  .bg-transparent-light-#{$level} {
+    background-color: rgba(white, $opacityValue);
+  }
+
+  // transparent background
+  @each $color, $colorValue in $theme-colors {
+
+    // background color
+    .bg-#{$color}-opacity-#{$level} {
+      background-color: rgba($colorValue, $opacityValue);
+    }
+
+    // text color
+    @if $level == 50 or $level == 70 or $level == 90 {
+
+      .text-#{$color}-#{$level} {
+        color: rgba($colorValue, $opacityValue);
+      }
+    }
+  }
+
+  // add to text
+  @if $level == 70 or $level == 90 {
+    .text-white-#{$level} {
+      color: rgba(white, $opacityValue);
+    }
+
+    .text-black-#{$level} {
+      color: rgba(black, $opacityValue);
+    }
+  }
+}
+
+// vendor colors
+@each $vendor, $vendorColor in $vendor-colors {
+  .vendor-#{$vendor} {
+    color: $vendorColor;
+  }
+
+  .vendor-#{$vendor}-hover:hover {
+    color: $vendorColor;
+  }
+}
+
+//border raduis
+
+// z-index
+@each $index in 5,10,15,10,25 {
+  .z-#{$index} {
+    z-index: $index;
+  }
+
+  .z-n#{$index} {
+    z-index: -$index;
+  }
+
+  .border-radius-#{$index} {
+    border-radius: #{$index}px;
+  }
+}
+// ########## STUFF ##########
+.soul-glow {
+  @include soul_glo(#ffffff);
+}
+
+.fill-container {
+  height: 100%;
+  width: 100%;
+}
+
+.contain-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.background-fixed {
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.border-highlight {
+  border-color: rgba(black, .3) !important;
+}
+
+.border-out {
+  background-clip: content-box;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.link-no-decor {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
