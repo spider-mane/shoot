@@ -5,9 +5,11 @@
 
   "require": {
     "giggsey/libphonenumber-for-php": "^8.10",
-    "illuminate/contracts": "^5.8",
     "illuminate/config": "^5.8",
     "illuminate/container": "^5.8",
+    "illuminate/contracts": "^5.8",
+    "illuminate/support": "^5.8",
+    "joshtronic/php-loremipsum": "^1.0",
     "timber/timber": "^1.10"
   },
 
@@ -19,7 +21,6 @@
 
   "require-dev": {
     "filp/whoops": "^2.4",
-    "joshtronic/php-loremipsum": "^1.0",
     "symfony/var-dumper": "^4.3"
   },
 
