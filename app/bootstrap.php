@@ -3,6 +3,7 @@
 use WebTheory\Data;
 use WebTheory\Config;
 use WebTheory\Container;
+use WebTheory\PhoneHelper;
 
 /**
  * add config files to container
@@ -47,3 +48,10 @@ Container::getInstance()->bindIf('data', function () {
 
     return new Data($info);
 }, true);
+
+/**
+ *
+ */
+Container::getInstance()->singleton('phone', function () {
+    return new PhoneHelper;
+});

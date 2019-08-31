@@ -1,6 +1,6 @@
 {
   "name": "@webtheorystudio/shoot",
-  "description": "wordpress boilerplate",
+  "description": "wordpress theme boilerplate",
   "repository": "github:spider-mane/shoot",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -63,7 +63,9 @@
     "leaflet": "^1.5.1",
     "lodash": "^4.17.14",
     "masonry-layout": "^4.2.2",
+    "mediaelement": "^4.2.12",
     "overlayscrollbars": "^1.9.1",
+    "owl.carousel": "^2.3.4",
     "parallax-js": "^3.1.0",
     "popper.js": "^1.15.0",
     "react": "^16.9.0",

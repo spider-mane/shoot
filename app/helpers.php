@@ -118,7 +118,7 @@ function wts_social_context($context)
  */
 function phone_format_us(string $phoneNumber, string $format = '-')
 {
-    return (new PhoneHelper)->formatUsNumber($phoneNumber, $format);
+    return wts_theme('phone')->formatUsNumber($phoneNumber, $format);
 }
 
 /**
@@ -127,53 +127,4 @@ function phone_format_us(string $phoneNumber, string $format = '-')
 function phone_link($phoneNumber, $region = 'US')
 {
     return (new PhoneHelper)->getPhoneLink($phoneNumber, $region);
-}
-
-/**
- * classlist_append
- */
-function classlist_append(string $classlist, $classes)
-{
-    $classlist = explode(' ', $classlist);
-    array_push($classlist, $classes);
-
-    return implode(' ', $classlist);
-}
-
-/**
- * classlist_remove
- */
-function classlist_remove(string $classlist, ...$classes)
-{
-    $classlist = explode(' ', $classlist);
-
-    foreach ($classes as $i => $class) {
-        unset($classlist[$i]);
-    }
-
-    array_values($classlist);
-
-    return $classlist;
-}
-
-/**
- * classlist_alter
- */
-function classlist_alter(string $class, $remove, $add)
-{
-    $class = remove_class($class, ...(array) $remove);
-    $class = add_class($class, ...(array) $add);
-}
-
-/**
- *
- */
-function classlist_mod($classlist, $class, $modifier)
-{
-    $classArray = explode(' ', $classlist);
-    $classPos = array_search($class, $classArray);
-
-    $classArray[$classPos] .= $modifier;
-
-    return implode(' ', $classlist);
 }
