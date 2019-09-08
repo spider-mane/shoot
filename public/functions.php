@@ -1,7 +1,7 @@
 <?php
 
-use Whoops\Run;
 use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 // project root directory
 define('WTS_ROOT', realpath(__DIR__ . '/../') . DIRECTORY_SEPARATOR);
