@@ -10,7 +10,8 @@
     "illuminate/contracts": "^5.8",
     "illuminate/support": "^5.8",
     "joshtronic/php-loremipsum": "^1.0",
-    "timber/timber": "^1.10"
+    "timber/timber": "^1.10",
+    "webtheory/backalley": "^0.6"
   },
 
   "autoload": {
