@@ -1,7 +1,12 @@
 {
   "name": "@webtheory/shoot",
-  "description": "wordpress theme boilerplate",
+  "description": "Wordpress theme boilerplate",
+  "author": {
+    "name": "Chris Williams",
+    "email": "spider.mane.web@gmail.com"
+  },
   "repository": "github:spider-mane/shoot",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",

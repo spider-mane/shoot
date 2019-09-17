@@ -2,6 +2,14 @@
   "name": "webtheory/shoot",
   "description": "Starter theme for wordpress using Timber and more",
   "type": "project",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Chris Williams",
+      "email": "spider.mane.web@gmail.com"
+    }
+  ],
 
   "require": {
     "giggsey/libphonenumber-for-php": "^8.10",
