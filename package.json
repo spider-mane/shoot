@@ -56,7 +56,7 @@
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",
     "autoprefixer": "^9.6.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "badger-accordion": "^1.2.3",
     "bootstrap": "^4.3.1",
     "daemonite-material": "^4.1.1",
